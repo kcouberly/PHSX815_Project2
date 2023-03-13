@@ -1,27 +1,43 @@
 # PHSX815_Project2
 
-## For Peer Review Input
-
-Random.py has been modified to include random.categorical function to produce categorical distributions (sourced from Random.py in Prof Rogan's github)
+## The Code
 
 ### Nested_Categorical.py
 
-Provides 2 outputs for the 2 potential hypotheses
+Provides 2 output files for the 2 tested hypotheses
 
--h for possible inputs
+-h shows possible inputs
 
-Runs a categorical distribution to determine which dice are rolled (default 1-20, can modify with settings)
+Can change number of experiments, number of rolls, sides for simple hypothesis, and the categorical distribution used for complex hypothesis
 
-Complex hypothesis is a categorical within a categorical -- initial dice roll determines the number of sides of the following dice roll
+Simple hypothesis (all 6 sided dice) outputs to a file called "alld6.txt"
 
-Simple hypothesis rolls only 6 sided die
+Complex hypothesis (categorical distribution of dice) outputs to a file called "categorical.txt"
 
-Then dice are rolled n number of times and results averaged
+### Analysis.py
 
-alld6.txt output for simple, categorical.txt output for complex
+-h shows inputs
 
-For some reason the code creates empty output files the first time I run it, then fills the outputs correctly if I run it a second time, not too big a deal but I'm not sure why this is
+Can change number of the initial categorical distribution for the complex hypothesis (determines the x axis of its histogram)
 
-Is anything confusing or hard to follow in the Nested_Categorical.py code?
+Defaults to 20 to match the amount in the paper
 
-Ideas for analysis -- which hypothesis is has higher likelyhood for a given roll average, plot the results of output files in a histogram
+Saves histograms using the two output files from Nested_Categorical.py as inputs
+
+alld6.pdf is the histogram for the simple hypothesis
+
+categorical.pdf is the histogram for the complex hypothesis
+
+Also prints the probabilities for the bins that correspond to the dataset of the customer for each hypothesis
+
+## Paper
+
+File PHSX815_Proj.pdf
+
+Uses the histograms  alld6.pdf and categorical.pdf in this repository
+
+Replicate using default settings of Nested_Categorical.py and Analysis.py
+
+Can also be found at https://www.overleaf.com/read/ndpmfctcchqd
+
+
