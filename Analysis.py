@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print("    -N [N] for number in categorical distribution of dice")
         print
         sys.exit(1)
-    if '-Nsides' in sys.argv:
+    if '-N' in sys.argv:
         p = sys.argv.index('-N')
         N = int(sys.argv[p+1])
     else:
